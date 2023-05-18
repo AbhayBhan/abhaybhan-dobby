@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_URL = "http://localhost:8000";
+//IF dev environment, use localhost please
+const API_URL = "https://abhay-dobby.onrender.com";
 
 export const uploadImage = async (mediaData) => {
     const response = await axios.post(`${API_URL}/api/img/`, mediaData);
