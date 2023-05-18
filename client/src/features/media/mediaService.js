@@ -7,3 +7,9 @@ export const uploadImage = async (mediaData) => {
 
     return response.data;
 }
+
+export const retrieveImages = async (id) => {
+    const response = await axios.post(`${API_URL}/api/img/getImages`, {user : id});
+
+    return response.data;
+}
