@@ -1,5 +1,6 @@
 import React from 'react';
 import {logout} from '../features/auth/authSlice';
+import { resetMedia } from '../features/media/mediaSlice';
 import { useNavigate } from 'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux';
 
@@ -11,6 +12,7 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     await dispatch(logout());
+    dispatch(resetMedia());
     navigate('/login');
   }
 
