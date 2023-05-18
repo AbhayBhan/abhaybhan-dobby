@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon index.js",
-    "serve" : "npm i && cd ./client && npm i && cd ../ && npm run server"
+    "serve" : "npm i && cd ./client && npm i && npm run build && && cd ../ && npm run server"
   },
   "repository": {
     "type": "git",
