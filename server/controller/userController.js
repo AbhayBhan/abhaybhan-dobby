@@ -17,6 +17,8 @@ export const registerUser = asyncHandler( async (req,res) => {
         throw new Error("The User Already Exists.")
     }
 
+    console.log("running");
+
     const salt = await bcryptjs.genSalt(10);
     const hashedPassword = await bcryptjs.hash(password, salt);
 
